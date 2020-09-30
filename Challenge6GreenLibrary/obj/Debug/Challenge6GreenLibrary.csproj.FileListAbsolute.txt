@@ -1,0 +1,6 @@
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenLibrary\bin\Debug\Challenge6GreenLibrary.dll
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenLibrary\bin\Debug\Challenge6GreenLibrary.pdb
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenLibrary\obj\Debug\Challenge6GreenLibrary.csprojAssemblyReference.cache
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenLibrary\obj\Debug\Challenge6GreenLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenLibrary\obj\Debug\Challenge6GreenLibrary.dll
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenLibrary\obj\Debug\Challenge6GreenLibrary.pdb

@@ -1,0 +1,10 @@
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\bin\Debug\Challenge6GreenMain.exe.config
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\bin\Debug\Challenge6GreenMain.exe
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\bin\Debug\Challenge6GreenMain.pdb
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\bin\Debug\Challenge6GreenLibrary.dll
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\bin\Debug\Challenge6GreenLibrary.pdb
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\obj\Debug\Challenge6GreenMain.csprojAssemblyReference.cache
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\obj\Debug\Challenge6GreenMain.csproj.CoreCompileInputs.cache
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\obj\Debug\Challenge6GreenMain.csproj.CopyComplete
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\obj\Debug\Challenge6GreenMain.exe
+C:\Users\Chani\Desktop\ElevenFiftyProjects\GoldBadgeConsoleApps\Challenge6GreenMain\obj\Debug\Challenge6GreenMain.pdb
