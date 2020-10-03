@@ -22,6 +22,29 @@ namespace Challenge6GreenLibrary
             return _listOfHybrids;
         }
 
+        // Update: each vehicle info
+        public bool UpdateExistingHybrid(string originalMake, HybridClass newMake)
+        {
+            //find the content 
+            HybridClass oldMake = GetHybridByMake(originalMake);
+
+            //update the content
+            if (oldMake != null)
+            {
+                oldMake.Make = newMake.Make;
+                oldMake.Model = newMake.Model;
+                oldMake.Year = newMake.Year;
+                oldMake.Price = newMake.Price;
+                oldMake.Miles = newMake.Miles;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         // Delete: delete a vehicle by make name
         public bool RemoveHybridFromList(string make)
         {

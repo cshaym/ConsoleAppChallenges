@@ -26,10 +26,11 @@ namespace Challenge4OutingsLibrary
         // Read: display combined cost for all outings
         public List<OutingsClass> GetCostList()
         {
-        return _costOfOutings;
+            return _costOfOutings;
+            
         }
 
-        // Read: display outing costs by type(OutingType)
+        // Read: display outing costs (OutingType)
         //public List<OutingsClass> GetOutingList()
         //{
         //return _listOfOutings;

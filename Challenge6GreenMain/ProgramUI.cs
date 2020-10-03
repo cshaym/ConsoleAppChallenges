@@ -37,8 +37,12 @@ namespace Challenge6GreenMain
                     "7. View All Hybrid Vehicles\n" +
                     "8. Add A New Hybrid Vehicle\n" +
                     "9. Delete A Hybrid Vehicle\n" +
+                    "-----------------------------\n" +
+                    "10. Update An Electric Vehicle\n" +
+                    "11. Update An Gas Vehicle\n" +
+                    "12. Update An Hybrid Vehicle\n" +
                     "\n" +
-                    "10. Exit");
+                    "13. Exit");
                 // Getting the user's input
                 string input = Console.ReadLine();     
                 // Evaluating
@@ -81,6 +85,16 @@ namespace Challenge6GreenMain
                         DeleteHybrid();
                         break;
                     case "10":
+                        // Update A Vehicle
+                        UpdateExistingElectric();
+                        break;
+                    case "11":
+                        UpdateExistingGas();
+                        break;
+                    case "12":
+                        UpdateExistingHybrid();
+                        break;
+                    case "13":
                         // Exit
                         Console.WriteLine("Goodbye!");
                         keepRunning = false;
@@ -147,8 +161,8 @@ namespace Challenge6GreenMain
             Console.WriteLine("\nEnter the model of the vehicle you'd like to remove. (Please write exact spelling and symbols):");
             string input = Console.ReadLine();       
             // Calling the delete method from the repo
-            bool wasDeleted = _electricRepo.RemoveElectricFromList(input);   
-            
+            bool wasDeleted = _electricRepo.RemoveElectricFromList(input);
+
             if (wasDeleted)
             {
                 Console.WriteLine("The vehicle was successfully deleted.");
@@ -286,6 +300,113 @@ namespace Challenge6GreenMain
             }
         } //-end of DeleteHybrid()-
 
+        // case 10
+        private void UpdateExistingElectric()
+        {
+            Console.WriteLine("Enter the make of the vehicle you'd like to update:");
+            string oldMake = Console.ReadLine();
+            ElectricClass newMake = new ElectricClass();
+            // Make  
+            Console.WriteLine("Enter the make of the vehicle:");
+            newMake.Make = Console.ReadLine().ToUpper();
+            // Model
+            Console.WriteLine("Enter the model of the vehicle:");
+            newMake.Model = Console.ReadLine();
+            // Year
+            Console.WriteLine("Enter the year of the vehicle:");
+            string yearAsString = Console.ReadLine();
+            newMake.Year = int.Parse(yearAsString);
+            // Price
+            Console.WriteLine("How much did the vehicle cost? Do not use a dollar sign($). No commas needed.:");
+            string priceAsString = Console.ReadLine();
+            newMake.Price = int.Parse(priceAsString);
+            // Miles
+            Console.WriteLine("How many miles can it drive on a fully charged battery? (Numbers only please)");
+            string milesAsString = Console.ReadLine();
+            newMake.Miles = int.Parse(milesAsString);
+
+            bool wasUpdated = _electricRepo.UpdateExistingElectric(oldMake, newMake);   
+            if (wasUpdated)  
+            {
+                Console.WriteLine("Vehicle successfully updated!");
+            }
+            else
+            {
+                Console.WriteLine("Could not update vehicle.");
+            }
+        }
+
+        // case 11
+        private void UpdateExistingGas()
+        {
+            Console.WriteLine("Enter the make of the vehicle you'd like to update:");
+            string oldMake = Console.ReadLine();
+            GasClass newMake = new GasClass();
+            // Make  
+            Console.WriteLine("Enter the make of the vehicle:");
+            newMake.Make = Console.ReadLine().ToUpper();
+            // Model
+            Console.WriteLine("Enter the model of the vehicle:");
+            newMake.Model = Console.ReadLine();
+            // Year
+            Console.WriteLine("Enter the year of the vehicle:");
+            string yearAsString = Console.ReadLine();
+            newMake.Year = int.Parse(yearAsString);
+            // Price
+            Console.WriteLine("How much did the vehicle cost? Do not use a dollar sign($). No commas needed.:");
+            string priceAsString = Console.ReadLine();
+            newMake.Price = int.Parse(priceAsString);
+            // Miles
+            Console.WriteLine("How many miles can it drive on a fully charged battery? (Numbers only please)");
+            string milesAsString = Console.ReadLine();
+            newMake.Miles = int.Parse(milesAsString);
+
+            bool wasUpdated = _gasRepo.UpdateExistingGas(oldMake, newMake);
+            if (wasUpdated)
+            {
+                Console.WriteLine("Vehicle successfully updated!");
+            }
+            else
+            {
+                Console.WriteLine("Could not update vehicle.");
+            }
+        }
+
+        // case 12
+        private void UpdateExistingHybrid()
+        {
+            Console.WriteLine("Enter the make of the vehicle you'd like to update:");
+            string oldMake = Console.ReadLine();
+            HybridClass newMake = new HybridClass();
+            // Make  
+            Console.WriteLine("Enter the make of the vehicle:");
+            newMake.Make = Console.ReadLine().ToUpper();
+            // Model
+            Console.WriteLine("Enter the model of the vehicle:");
+            newMake.Model = Console.ReadLine();
+            // Year
+            Console.WriteLine("Enter the year of the vehicle:");
+            string yearAsString = Console.ReadLine();
+            newMake.Year = int.Parse(yearAsString);
+            // Price
+            Console.WriteLine("How much did the vehicle cost? Do not use a dollar sign($). No commas needed.:");
+            string priceAsString = Console.ReadLine();
+            newMake.Price = int.Parse(priceAsString);
+            // Miles
+            Console.WriteLine("How many miles can it drive on a fully charged battery? (Numbers only please)");
+            string milesAsString = Console.ReadLine();
+            newMake.Miles = int.Parse(milesAsString);
+
+            bool wasUpdated = _hybridRepo.UpdateExistingHybrid(oldMake, newMake);
+            if (wasUpdated)
+            {
+                Console.WriteLine("Vehicle successfully updated!");
+            }
+            else
+            {
+                Console.WriteLine("Could not update vehicle.");
+            }
+        }
         // Here are some pre-made vehicles I want inside the app
         private void SeedMealList()
         {

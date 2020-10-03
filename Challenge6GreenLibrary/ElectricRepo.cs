@@ -22,6 +22,29 @@ namespace Challenge6GreenLibrary
             return _listOfElectrics;
         }
 
+        // Update: each vehicle info
+        public bool UpdateExistingElectric(string originalMake, ElectricClass newMake)
+        {
+            //find the content 
+            ElectricClass oldMake = GetElectricByMake(originalMake);
+
+            //update the content
+            if (oldMake != null)
+            {
+                oldMake.Make = newMake.Make;
+                oldMake.Model = newMake.Model;
+                oldMake.Year = newMake.Year;
+                oldMake.Price = newMake.Price;
+                oldMake.Miles = newMake.Miles;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         // Delete: delete a vehicle by make name
         public bool RemoveElectricFromList(string make)
         {

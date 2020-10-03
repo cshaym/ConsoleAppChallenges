@@ -11,7 +11,7 @@ namespace Challenge1CafeClasses
         private List<MenuClass> _listOfMeals = new List<MenuClass>();
 
         // Create: creating new menu items
-        public void AddMealToList(MenuClass meal)
+        public void AddMealToList(MenuClass meal) 
         {
             _listOfMeals.Add(meal);
         }

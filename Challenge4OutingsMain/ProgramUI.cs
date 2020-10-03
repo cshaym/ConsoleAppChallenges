@@ -14,7 +14,7 @@ namespace Challenge4OutingsMain
 
         public void Run()
         {
-            //SeedContentList();
+            SeedContentList();
             KomodoDisplay();
         }
 
@@ -27,9 +27,8 @@ namespace Challenge4OutingsMain
                     "\n" +
                     "1. View All Outings\n" +
                     "2. Create A New Outing\n" +
-                    "3. View Total Outings Cost\n" +
-                    "4. View A Specific Type Of Outing Cost\n" +
-                    "5. Exit\n");
+                    "3. View Outing Cost\n" +
+                    "4. Exit\n");
                 
                 string input = Console.ReadLine();     
                                                        
@@ -44,14 +43,10 @@ namespace Challenge4OutingsMain
                         CreateNewOuting();
                         break;
                     case "3":
-                        // View Total Outings Cost
-                        ViewTotalCost();
+                        // View Outing Cost
+                        ViewCost();
                         break;
                     case "4":
-                        // View A Specific Type Of Outing Cost
-                        ViewSpecificCost();
-                        break;
-                    case "5":
                         // Exit
                         Console.WriteLine("Goodbye!");
                         keepRunning = false;
@@ -111,29 +106,16 @@ namespace Challenge4OutingsMain
             _eventRepo.AddOutingToList(newEvent);
         }//-end of CreateNewOuting()-
 
-        // case 3----------this aint working--------------
-        private void ViewTotalCost()
-        {
-            Console.Clear();
-
-            List<OutingsClass> _costOfOutings = _eventRepo.GetCostList();
-
-            foreach (OutingsClass outing in _costOfOutings)
-            {
-                Console.WriteLine($"Total amount spent on all outings: $" + outing.TotalOutingCost);
-            }
-        }//-end of ViewTotalCost()-
-
-        // case 4
-        private void ViewSpecificCost()
+        // case 3
+        private void ViewCost()
         {
             Console.Clear();    
             
             Console.WriteLine("Enter the type of event you'd like to see:");
             
-            string specific = Console.ReadLine();     
+            string cost = Console.ReadLine();     
             
-            OutingsClass outing = _eventRepo.GetCostByType(specific);  
+            OutingsClass outing = _eventRepo.GetCostByType(cost);  
             
             if (outing != null)
             {
@@ -143,15 +125,20 @@ namespace Challenge4OutingsMain
             {
                 Console.WriteLine("Sorry, no event by that name was found.");
             }
-        }//-end of ViewSpecificCost()-
+        }//-end of ViewCost()-
 
         // Seeds
         private void SeedContentList()
         {
-            //OutingsClass golf = new OutingsClass("Golf", 24, 12/12/2020, 8.50, 304);
-            //OutingsClass bowling = new OutingsClass("Bowling", 39, 2020 / 12 / 18, 12, 668);
-            //OutingsClass amusementPark = new OutingsClass("Amusement Park", 11, 2020 / 12 / 18, 22, 342);
-            //OutingsClass concert = new OutingsClass("Concert", 20, 2020 / 12 / 18, 30, 700);
+            OutingsClass golf = new OutingsClass("Golf", 24, new DateTime(2020, 12, 12), 8.50, 304);
+            OutingsClass bowling = new OutingsClass("Bowling", 39, new DateTime(2020, 12, 12), 12, 668);
+            OutingsClass amusementPark = new OutingsClass("Amusement Park", 11, new DateTime(2020, 12, 12), 22, 342);
+            OutingsClass concert = new OutingsClass("Concert", 20, new DateTime(2020, 12, 12), 30, 700);
+
+            _eventRepo.AddOutingToList(golf);
+            _eventRepo.AddOutingToList(bowling);
+            _eventRepo.AddOutingToList(amusementPark);
+            _eventRepo.AddOutingToList(concert);
         }
     }
 }
